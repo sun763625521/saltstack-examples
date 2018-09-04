@@ -4,7 +4,7 @@ include:
 keepalived-server:
   file.managed:
     - name: /etc/keepalived/keepalived.conf
-    - source: salt://cluster/files/outside-keepalived.conf
+    - source: salt://cluster/files/haproxy-outside-keepalived.conf
     - mode: 644
     - user: root
     - group: root
