@@ -57,13 +57,15 @@ php-ini:
     - group: root
     - mode: 644
  
-pho-fpm:
+
+php-fpm-conf:
   file.managed:
     - name: /usr/local/php/etc/php-fpm.conf 
     - source: salt://modules/php/files/php-fpm.conf
     - user: root
     - group: root
     - mode: 644
+
 
 php-service:
   file.managed:
@@ -85,7 +87,7 @@ php-service:
       - cmd: php-service
     - watch:
       - file: php-ini
-      - file: php-fpm
+      - file: php-fpm-conf
 
  
 
