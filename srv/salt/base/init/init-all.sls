@@ -5,3 +5,4 @@ include:
   - init.sysctl
   - init.yum-repo
   - init.selinux
+  - init.user-www
